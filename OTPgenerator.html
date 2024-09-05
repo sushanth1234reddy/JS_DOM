@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate OTP</title>
+</head>
+<body>
+    <h2>Generate 5-Digit OTP</h2>
+    <span id="result"></span><br>
+    <button id="fff">Get OTP</button>
+    <script>
+        let btn=document.getElementById("fff");
+        btn.style.marginTop="30px";
+        btn.addEventListener("click",()=>{
+            let res=document.getElementById("result");
+            res.style.height="70px";
+            res.style.width="150px";
+            res.style.border="2px solid black";
+            
+            let otp=Math.floor(Math.random()*99999);
+            res.innerHTML=otp;
+        })
+    </script>
+    
+</body>
+
+</html>
