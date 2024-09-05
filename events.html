@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="para"></div>
+    <button id="btn">Click here</button>
+    <script>
+        let para=document.getElementById("para");
+        let btn=document.getElementById("btn");
+        para.setAttribute("height","20px");
+        para.setAttribute("width","20px");
+        para.style.border="2px solid red";
+        document.body.appendChild(para);
+        document.body.appendChild(btn);
+        btn.style.margin="20px 20px 20px 60px";
+        para.style.height="50px";
+        para.style.width="100px";
+        para.style.marginLeft="50px";
+        para.style.textAlign="center";
+        btn.addEventListener("click",function(){
+            let inn=Math.floor(Math.random()*99999);
+            para.textContent=`${inn}`;
+            para.style.backgroundColor="cyan";
+        });
+        btn.addEventListener("dblclick",function(){
+            para.textContent="OTP Already Sent";
+        });
+        btn.addEventListener("mousedown",function(){
+            btn.style.backgroundColor="brown";
+            btn.style.color="white";
+        });
+        btn.addEventListener("mouseup",function(){
+            btn.style.backgroundColor="green";
+            btn.style.color="white";
+        });
+        btn.addEventListener("mouseover",function(){
+            document.body.style.backgroundColor="yellow";
+        })
+
+    </script>
+</body>
+</html>
